@@ -1,0 +1,149 @@
+
+body{
+    background-color: #EFEFF4;
+}
+
+html{
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+    color: #4D4F62;
+}
+
+.container{
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* HEAEDER */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+header h1{
+    font-size: 3.6rem;
+    font-weight: 200;
+}
+
+header p{
+    font-weight: 400;
+    opacity: 0.5;
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+/* GRILLE */
+
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 125px 125px 125px 125px;
+    gap: 30px;
+    position: relative;
+    margin-top: 70px;
+}
+
+#box1{
+    background-color: white;
+    border-radius: 4px;
+    border-top: 5px solid #EA5454;
+    grid-column: 2 / 2;
+    grid-row: 1 / span 2;
+    box-shadow: 2px 19px 21px 0px rgba(77,79,98,0.37);
+}
+
+#box2{
+    background-color: white;
+    border-radius: 4px;
+    border-top: 5px solid #549EF2;
+    grid-column: 3 / 3; 
+    grid-row: 2 / span 2;
+    box-shadow: 2px 19px 21px 0px rgba(77,79,98,0.37);
+}
+
+#box3{
+    background-color: white;
+    border-radius: 4px;
+    border-top: 5px solid #FCAE4A;
+    grid-column: 2 / 2;
+    grid-row: 3 / span 2;
+    box-shadow: 2px 19px 21px 0px rgba(77,79,98,0.4);
+}
+#box4{
+    background-color: white;
+    border-radius: 4px;
+    border-top: 5px solid #44D3D2;
+    grid-column:1 / 1;
+    grid-row: 2/ span 2;
+    box-shadow: 2px 19px 21px 0px rgba(77,79,98,0.4);
+}
+
+/* CONTENU GRILLE */
+
+.contenu{
+    margin: 26px 32px;
+}
+
+.contenu h2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.contenu p{
+    opacity: 0.5;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 14px;
+}
+
+.icone{
+    width: 64px;
+    position: absolute;
+    bottom: 26px;
+    right: 32px;
+}
+
+#box1, #box2, #box3, #box4 {
+    position: relative
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 576px){
+    
+        #grid{
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(8, 125px);
+            
+        }
+
+        #box1{
+            grid-column: 1 / 1;
+            grid-row: 3 / span 2;
+        }
+
+        #box2{
+            grid-column: 1 / 1;
+            grid-row: 7 / span 2;
+        }
+
+        #box3{
+            grid-column: 1/1;
+            grid-row: 5 / span 2;
+        }
+
+        #box4{
+            grid-column: 1/1;
+            grid-row: 1 / span 2;
+        }
+
+
+}
